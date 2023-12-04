@@ -22,14 +22,14 @@
           </div>
         </div>
       </div>
-      <div class="mt-3 w-full px-4 py-4 bg-blue-500 bg-opacity-10 rounded-md">
+      <a href="./src/pages/scan_kartu.php" class="mt-3 w-full px-4 py-4 bg-blue-500 bg-opacity-10 rounded-md">
         <div class="h-20">
           <span class="iconify text-blue-500" data-icon="tabler:line-scan" data-width="100%"></span>
         </div>
         <div class="font-bold mt-2 text-center text-blue-500">
           Scan Kartu
         </div>
-      </div>
+      </a>
       <div class="mt-4 flex flex-col sm:flex-row gap-4">
         <a href="./src/pages/data_mahasiswa.php" class="w-full px-4 py-3 bg-pink-500 bg-opacity-10 rounded-md">
           <div class="rounded-md p-1.5 bg-white w-10">

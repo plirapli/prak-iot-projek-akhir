@@ -59,7 +59,7 @@
                 </div>
               </div>
               <div class="mt-2">
-                <a href="../utils/hapus.php?id=<?= $data['id'] ?>" class="w-full button button-sm button-danger">Hapus</a>
+                <a href="../utils/data_mhs_hapus.php?= $data['id'] ?>" class="w-full button button-sm button-danger">Hapus</a>
               </div>
             </div>
           <?php } ?>
@@ -72,7 +72,7 @@
   <dh-component>
     <div style="display: none;" class="py-12 bg-black bg-opacity-50 transition-all z-10 absolute top-0 right-0 bottom-0 left-0" id="modal">
       <div role="alert" class="container mx-auto w-11/12 md:w-2/3 max-w-md">
-        <form method="POST" action="../utils/tambah_data_mahasiswa.php" class="relative p-6 bg-white shadow-lg rounded">
+        <form method="POST" action="../utils/data_mhs_tambah.php" class="relative p-6 bg-white shadow-lg rounded">
           <h1 class="text-gray-800 font-lg font-bold tracking-normal leading-tight mb-2">Tambah Data Siswa</h1>
           <div class="mb-3">
             <label for="name" class="text-gray-800 text-sm">Nama Siswa</label>
