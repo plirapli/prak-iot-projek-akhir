@@ -39,7 +39,7 @@
             Data Siswa
           </div>
         </a>
-        <a href="./src/" class="w-full px-4 py-3 bg-teal-500 bg-opacity-10 rounded-md">
+        <a href="./src/pages/data_absen.php" class="w-full px-4 py-3 bg-teal-500 bg-opacity-10 rounded-md">
           <div class="rounded-md p-1.5 bg-white w-10">
             <span class="iconify text-teal-500" data-icon="fluent:text-bullet-list-square-person-20-filled" data-width="100%"></span>
           </div>
