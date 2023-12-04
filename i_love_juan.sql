@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Des 2023 pada 18.42
--- Versi server: 10.4.21-MariaDB
--- Versi PHP: 8.0.10
+-- Generation Time: Dec 04, 2023 at 05:48 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `absen`
+-- Table structure for table `absen`
 --
 
 CREATE TABLE `absen` (
@@ -36,58 +36,41 @@ CREATE TABLE `absen` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `absen`
+-- Dumping data for table `absen`
 --
 
 INSERT INTO `absen` (`id`, `card_no`, `date`, `jam_masuk`, `jam_keluar`) VALUES
-(1, '123jkl321', '2023-12-03', '00:34:00', '00:39:55');
+(1, '123jkl321', '2023-12-03', '00:34:00', '00:39:55'),
+(3, '123jkl321', '2023-12-04', '23:41:02', '23:41:42');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mahasiswa`
+-- Table structure for table `siswa`
 --
 
-CREATE TABLE `mahasiswa` (
+CREATE TABLE `siswa` (
   `id` int(11) NOT NULL,
-  `nim` varchar(255) NOT NULL,
+  `nis` varchar(255) NOT NULL,
   `card_no` varchar(255) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `prodi` varchar(50) NOT NULL
+  `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `mahasiswa`
+-- Dumping data for table `siswa`
 --
 
-INSERT INTO `mahasiswa` (`id`, `nim`, `card_no`, `name`, `prodi`) VALUES
-(4, '123210078', '123fdfg123', 'Rafli', 'TES'),
-(5, '123210136', '123jkl321', 'Gega', 'Informatika');
+INSERT INTO `siswa` (`id`, `nis`, `card_no`, `name`) VALUES
+(4, '123210078', '123fdfg123', 'Rafli'),
+(5, '123210136', '123jkl321', 'Gega');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `status`
+-- Table structure for table `temp_rfid`
 --
 
-CREATE TABLE `status` (
-  `mode` int(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data untuk tabel `status`
---
-
-INSERT INTO `status` (`mode`) VALUES
-(2);
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `temp_absen`
---
-
-CREATE TABLE `temp_absen` (
+CREATE TABLE `temp_rfid` (
   `card_no` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -96,44 +79,38 @@ CREATE TABLE `temp_absen` (
 --
 
 --
--- Indeks untuk tabel `absen`
+-- Indexes for table `absen`
 --
 ALTER TABLE `absen`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `mahasiswa`
+-- Indexes for table `siswa`
 --
-ALTER TABLE `mahasiswa`
+ALTER TABLE `siswa`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `status`
+-- Indexes for table `temp_rfid`
 --
-ALTER TABLE `status`
-  ADD PRIMARY KEY (`mode`);
-
---
--- Indeks untuk tabel `temp_absen`
---
-ALTER TABLE `temp_absen`
+ALTER TABLE `temp_rfid`
   ADD PRIMARY KEY (`card_no`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `absen`
+-- AUTO_INCREMENT for table `absen`
 --
 ALTER TABLE `absen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `mahasiswa`
+-- AUTO_INCREMENT for table `siswa`
 --
-ALTER TABLE `mahasiswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `siswa`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
