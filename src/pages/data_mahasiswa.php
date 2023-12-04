@@ -13,7 +13,7 @@
 
       <!-- Header -->
       <div class="py-4 flex gap-4 items-center">
-        <a href="../../index.php" class="p-1 bg-black bg-opacity-10 rounded">
+        <a href="../../index.php" class="button button-sm button-gray">
           <span class="iconify" data-icon="material-symbols:arrow-left-alt-rounded" data-width="28"></span>
         </a>
         <div class="font-bold">
@@ -27,13 +27,13 @@
           <form class="w-full">
             <input type="text" class="form-input" placeholder="Cari Siswa">
           </form>
-          <button onclick="modalAddSiswaHandler(0)" class="button button-black min-w-fit">
+          <button onclick="modalAddSiswaHandler(0)" class="button bg-pink-500 text-white min-w-fit">
             Tambah Siswa
           </button>
         </div>
 
         <!-- Siswa List -->
-        <div class="flex items-start gap-3 pb-4">
+        <div class="flex items-start gap-4 pb-4">
 
           <?php
           include "../../config/database.php";
@@ -43,12 +43,13 @@
           while ($data = mysqli_fetch_array($query)) {
           ?>
             <!-- Card -->
-            <div class="w-40 p-3 bg-black bg-opacity-5 rounded-md">
-              <div class="w-full h-24 bg-fuchsia-500 rounded"></div>
+            <div class="w-40 p-4 bg-pink-500 bg-opacity-10 rounded-md">
+              <span class="iconify w-full" data-icon="bx:user" data-width="80"></span>
               <div>
-                <div class="mt-3 text-sm font-medium">
+                <div class="mt-1 text-sm w-full text-center font-semibold text-pink-500">
                   <?= $data['name'] ?>
                 </div>
+                <div class="w-full h-0.5 my-2.5 bg-pink-500 rounded-full"></div>
                 <div class="mt-1 flex items-center gap-1.5">
                   <span class="iconify" data-icon="solar:user-id-bold" data-width="24"></span>
                   <div class="text-sm"><?= $data['nis'] ?></div>
@@ -58,8 +59,8 @@
                   <div class="text-sm uppercase font-mono"><?= $data['card_no'] ?></div>
                 </div>
               </div>
-              <div class="mt-2">
-                <a href="../utils/data_mhs_hapus.php?= $data['id'] ?>" class="w-full button button-sm button-danger">Hapus</a>
+              <div class="mt-4">
+                <a href="../utils/data_mhs_hapus.php?id=<?= $data['id'] ?>" class="w-full button button-sm button-danger-secondary">Hapus</a>
               </div>
             </div>
           <?php } ?>
@@ -87,7 +88,7 @@
             <input id="card_no" readonly name="card_no" class="mt-1 form-input" placeholder="Masukkan nomor kartu" required />
           </div>
           <div class="flex flex-col gap-2.5 w-full">
-            <button type="submit" name="add_user" class="button button-black">Tambah</button>
+            <button type="submit" name="add_user" class="button bg-pink-500 text-white">Tambah</button>
             <button type="button" class="button button-gray" onclick="modalAddSiswaHandler(1)">Kembali</button>
           </div>
         </form>
@@ -127,17 +128,14 @@
       // Scanning membaca kartu rfid
       setInterval(() => {
         const cardNoElement = document.querySelector('#card_no')
-        if (!cardNoElement.value) {
-          fetch('../utils/scan_card.php')
-            .then((res) => res.text())
-            .then((data) => {
-              if (data) {
-                cardNoElement.value = data
-                // fetch()
-              }
-            });
-        }
-      }, 1000);
+        fetch('../utils/scan_card.php')
+          .then((res) => res.text())
+          .then((data) => {
+            if (data && (cardNoElement.value != data)) {
+              cardNoElement.value = data
+            }
+          });
+      }, 1500);
     </script>
 
     </script>
