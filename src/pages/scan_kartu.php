@@ -13,7 +13,7 @@
     <div class='px-3 flex flex-col w-full min-h-full'>
       <!-- Header -->
       <div class="py-4 flex gap-4 items-center">
-        <a href="../../index.php" class="p-1 bg-black bg-opacity-10 rounded">
+        <a href="../../index.php" class="button button-sm button-gray">
           <span class="iconify" data-icon="material-symbols:arrow-left-alt-rounded" data-width="28"></span>
         </a>
         <div class="font-bold">
