@@ -17,7 +17,7 @@
           <span class="iconify" data-icon="material-symbols:arrow-left-alt-rounded" data-width="28"></span>
         </a>
         <div class="font-bold">
-          Data Absensi
+          List of Attendance
         </div>
       </div>
 
@@ -37,16 +37,16 @@
                 No
               </th>
               <th class="px-6 py-3 font-bold text-left text-xs uppercase align-middle">
-                Nama
+                Name
               </th>
               <th class="px-6 py-3 font-bold text-left text-xs uppercase align-middle">
-                Tanggal
+                Date
               </th>
               <th class="px-6 py-3 font-bold text-center text-xs uppercase align-middle">
-                Jam Masuk
+                Time In
               </th>
               <th class="px-6 py-3 font-bold text-center text-xs uppercase rounded-r align-middle">
-                Jam Keluar
+                Time Out
               </th>
             </tr>
           </thead>

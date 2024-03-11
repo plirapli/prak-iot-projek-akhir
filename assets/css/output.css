@@ -833,6 +833,10 @@ video {
   width: 91.666667%;
 }
 
+.w-card {
+  width: 16rem;
+}
+
 .w-40{
   width: 10rem;
 }

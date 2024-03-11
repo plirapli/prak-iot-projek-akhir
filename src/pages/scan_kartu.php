@@ -1,3 +1,8 @@
+<?php 
+require_once "../../config/database.php";
+mysqli_query($connect, "DELETE FROM temp_rfid");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +22,7 @@
           <span class="iconify" data-icon="material-symbols:arrow-left-alt-rounded" data-width="28"></span>
         </a>
         <div class="font-bold">
-          Scan Kartu
+          Scan Card
         </div>
       </div>
 

@@ -15,7 +15,7 @@
       <div class='flex items-end gap-2 mt-4 mb-2'>
         <div class='w-full'>
           <h1 class='inline text-lg font-bold leading-none'>
-            Sistem Absensi Siswa
+            Student Attendance Management
           </h1>
           <div class='text-gray-400 text-sm'>
             SD NEGERI "VETERAN" YOGYAKARTA
@@ -27,7 +27,7 @@
           <span class="iconify text-blue-500" data-icon="tabler:line-scan" data-width="100%"></span>
         </div>
         <div class="font-bold mt-2 text-center text-blue-500">
-          Scan Kartu
+          Scan Card
         </div>
       </a>
       <div class="mt-4 flex flex-col sm:flex-row gap-4">
@@ -36,7 +36,7 @@
             <span class="iconify text-pink-500" data-icon="mdi:users" data-width="100%"></span>
           </div>
           <div class="font-bold mt-2">
-            Data Siswa
+            Student Data
           </div>
         </a>
         <a href="./src/pages/data_absen.php" class="w-full px-4 py-3 bg-teal-500 bg-opacity-10 rounded-md">
@@ -44,7 +44,7 @@
             <span class="iconify text-teal-500" data-icon="fluent:text-bullet-list-square-person-20-filled" data-width="100%"></span>
           </div>
           <div class=" font-bold mt-2">
-            Data Absensi
+            List of Attendance
           </div>
         </a>
       </div>

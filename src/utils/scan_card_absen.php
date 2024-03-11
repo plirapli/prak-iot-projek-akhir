@@ -15,7 +15,7 @@ if ($data_kartu != NULL) {
 
   if ($jumlah_data == 0) {
     echo '<div id="not-found" class="bg-red-500 bg-opacity-10 text-red-500 p-4 rounded-md">
-            Kartu tidak terdaftar. Silakan coba lagi.
+            Card is Not Registered. Please Try Again.
           </div>';
   } else {
     $data_mhs = mysqli_fetch_array($cari_mhs);
@@ -50,10 +50,10 @@ if ($data_kartu != NULL) {
           href="../utils/absen_add.php?card_no=' . $card_no . '&date=' . $tanggal . '&jam=' . $jam . '"
           class="w-full button bg-blue-500 text-white"
         >
-          Absen
+          Proceed
         </a>
         <a href="../utils/absen_delete.php" class="mt-2 w-full button button-gray">
-          Batalkan
+          Cancel
         </a>
       </div>
     ';
@@ -62,7 +62,7 @@ if ($data_kartu != NULL) {
   echo '
     <div id="waiting" class="flex flex-col items-center justify-center bg-blue-500 bg-opacity-10 gap-4 p-6 rounded-lg">
       <span class="iconify text-blue-500 animate-pulse" data-icon="ion:id-card-outline" data-width="128"></span>
-      <div class="font-medium text-lg text-gray-400">Silakan Tempelkan Kartu Anda</div>
+      <div class="font-medium text-lg text-gray-400">Please Tap Your Card</div>
     </div>
   ';
 }
